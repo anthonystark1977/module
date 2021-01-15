@@ -458,7 +458,7 @@ inline val Any?.unit
 inline val ViewGroup.inflater: LayoutInflater get() = LayoutInflater.from(context)
 
 
-private inline fun <reified T : Any, B : ViewDataBinding> RecyclerView.ViewHolder.onlyBind(
+inline fun <reified T : Any, B : ViewDataBinding> RecyclerView.ViewHolder.onlyBind(
   item: Any,
   binding: B,
   crossinline bind: B.(T) -> Unit
