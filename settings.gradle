@@ -1,0 +1,3 @@
+include ':happiness'
+include ':app'
+rootProject.name = "Stark"
