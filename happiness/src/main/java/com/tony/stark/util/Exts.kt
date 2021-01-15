@@ -23,10 +23,12 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
+import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.RecyclerView
 import com.anthonystark.modu.NotNullLiveData
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
@@ -454,3 +456,13 @@ inline val Any?.unit
   get() = Unit
 
 inline val ViewGroup.inflater: LayoutInflater get() = LayoutInflater.from(context)
+
+
+private inline fun <reified T : Any, B : ViewDataBinding> RecyclerView.ViewHolder.onlyBind(
+  item: Any,
+  binding: B,
+  crossinline bind: B.(T) -> Unit
+) {
+  check(item is T) { "${this::class.java.simpleName}::bind only accept ${T::class.java.simpleName}, but item=$item" }
+  binding.bind(item)
+}
