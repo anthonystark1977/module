@@ -43,13 +43,7 @@ abstract class BaseFragment<
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Timber.d("$this:: onViewCreated()")
-        initView(view, savedInstanceState)
-    }
-
-    @CallSuper
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        initBindingViewData(savedInstanceState)
+        setUpView(view, savedInstanceState)
         bindVM()
     }
 
@@ -61,8 +55,7 @@ abstract class BaseFragment<
         compositeDisposable.clear()
     }
 
-    protected abstract fun initView(view: View, savedInstanceState: Bundle?)
-    protected abstract fun initBindingViewData(savedInstanceState: Bundle?)
+    protected abstract fun setUpView(view: View, savedInstanceState: Bundle?)
 
     private fun bindVM() {
         mViewModel.state.observe(owner = viewLifecycleOwner, ::render)
