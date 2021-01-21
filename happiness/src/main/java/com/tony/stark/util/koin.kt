@@ -1,4 +1,4 @@
-package com.anthonystark.module.uti
+package com.tony.stark.util
 
 import androidx.lifecycle.ViewModel
 import org.koin.androidx.scope.ScopeFragment
