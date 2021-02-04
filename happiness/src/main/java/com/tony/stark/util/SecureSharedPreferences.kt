@@ -58,12 +58,18 @@ class SecureSharedPreferences(
         fun wrap(sharedPref: SharedPreferences,context: Context) = SecureSharedPreferences(sharedPref,context)
         fun Context.getPreferences(name:String,mode:Int): SharedPreferences = getSharedPreferences(name, mode)
 
+        const val EXPIRE_IN_DAY = 86400
+        const val EXPIRE_IN_FIVE_HOURS = 18000
+        const val EXPIRE_IN_THREE_HOURS = 10800
+        const val EXPIRE_IN_ONE_HOURS = 3600
+        const val EXPIRE_IN_FIVE_MINUTE = 300
         const val PREFERENCE_ROSEMARY= "RoseMary"
         const val KEY_PUSH_TOKEN = "pushToken"
         const val KEY_UUID = "uuid"
         const val KEY_DEVICE_TOKEN = "deviceToken"
         const val KEY_LOGIN_DATA = "loginData"
         const val KEY_SEARCH_HISTORY = "searchHistory"
+        const val KEY_TOKEN_EXPIRE_IN = "tokenExpireIn"
 
     }
 }
