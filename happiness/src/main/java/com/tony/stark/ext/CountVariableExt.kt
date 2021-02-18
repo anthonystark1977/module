@@ -1,15 +1,8 @@
-package com.khs.glovv.core.ext
+package com.tony.stark.ext
 
 import java.util.*
 
-/**
- * 좋아요 밑 팔로우 카운트.
- *
- *
- * @author 권혁신
- * @version 1.0.0
- * @since 2020-12-28 오후 3:53
- **/
+
 fun Int.getCountFormated(): String {
     var followerCount: Float
     val countResult: String

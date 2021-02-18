@@ -58,21 +58,18 @@ class SecureSharedPreferences(
         fun wrap(sharedPref: SharedPreferences,context: Context) = SecureSharedPreferences(sharedPref,context)
         fun Context.getPreferences(name:String,mode:Int): SharedPreferences = getSharedPreferences(name, mode)
 
-        const val PREFERENCE_GLOVV = "PREF_GLOVV"
+        const val EXPIRE_IN_DAY = 86400
+        const val EXPIRE_IN_FIVE_HOURS = 18000
+        const val EXPIRE_IN_THREE_HOURS = 10800
+        const val EXPIRE_IN_ONE_HOURS = 3600
+        const val EXPIRE_IN_FIVE_MINUTE = 300
+        const val PREFERENCE_ROSEMARY= "RoseMary"
         const val KEY_PUSH_TOKEN = "pushToken"
-        const val KEY_FOLLOWING_LIST = "followingList"
         const val KEY_UUID = "uuid"
         const val KEY_DEVICE_TOKEN = "deviceToken"
         const val KEY_LOGIN_DATA = "loginData"
-        const val KEY_STYLE_META_DATA = "styleMetaData"
-        const val KEY_STYLE_DAILY_META_DATA = "styleDailyMetaData"
-        const val KEY_STYLE_PLAY_META_DATA = "stylePlayMetaData"
-        const val KEY_STORE_MALE_META_DATA = "storeMaleMetaData"
-        const val KEY_STORE_FEMALE_META_DATA = "storeFemaleMetaData"
-        const val KEY_COLOR_DATA = "colorData"
-        const val KEY_REPORT_CATEGORY_DATA = "reportCategoryData"
         const val KEY_SEARCH_HISTORY = "searchHistory"
-        const val KEY_DAILY_DETAIL = "dailyDetail"
-        const val KEY_PLAY_DETAIL = "playDetail"
+        const val KEY_TOKEN_EXPIRE_IN = "tokenExpireIn"
+
     }
 }
