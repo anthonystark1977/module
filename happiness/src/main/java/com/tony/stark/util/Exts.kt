@@ -395,6 +395,17 @@ fun <A, B, C, R> LiveData<A>.combineLatest(
   }
 }
 
+/**
+ * If there is a method that needs to be repeated asynchronously, run the block below.
+ *
+ * @param times: Number of times to repeat.
+ * @param initialDelay: Delay time every iteration.
+ * @param factor: Delay time multiplied by argument.
+ * @param maxDelay: Maximum delay time by coerceAtMost.
+ * @author 권혁신
+ * @version 1.0.0
+ * @since 2021-02-26 오후 1:29
+ **/
 suspend fun <T> retryIO(
   times: Int,
   initialDelay: Long,
@@ -406,10 +417,7 @@ suspend fun <T> retryIO(
   repeat(times - 1) {
     try {
       return block()
-    } catch (e: IOException) {
-      // you can log an error here and/or make a more finer-grained
-      // analysis of the cause to see if retry is needed
-    }
+    } catch (e: IOException) { }
     delay(currentDelay)
     currentDelay = (currentDelay * factor).toLong().coerceAtMost(maxDelay)
   }
