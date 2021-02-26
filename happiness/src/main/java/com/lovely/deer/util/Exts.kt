@@ -473,3 +473,14 @@ inline fun <reified T : Any, B : ViewDataBinding> RecyclerView.ViewHolder.onlyBi
   check(item is T) { "${this::class.java.simpleName}::bind only accept ${T::class.java.simpleName}, but item=$item" }
   binding.bind(item)
 }
+
+
+/**
+ * Escape file name: only allow letters, numbers, dots and dashes
+ */
+private fun String.escapeFileName(): String {
+  return replace(
+    "[^a-zA-Z0-9.\\-]".toRegex(),
+    replacement = "_"
+  )
+}
