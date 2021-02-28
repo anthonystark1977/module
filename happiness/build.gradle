@@ -40,6 +40,20 @@ android {
     }
 }
 
+/*
+publish {
+    userOrg = 'cachapa'
+    repoName = 'maven'
+    groupId = 'net.cachapa.expandablelayout'
+    artifactId = 'expandablelayout'
+    publishVersion = android.defaultConfig.versionName
+    autoPublish = true
+    dryRun = false
+    publications = ['maven']
+}
+*/
+
+
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

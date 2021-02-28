@@ -5,14 +5,16 @@
     android:layout_height="match_parent"
     android:padding="15dp">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_code_lab"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_code_lab"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/main_code_lab"
-        android:textSize="16sp"
+        android:layout_height="0dp"
+        android:clipToPadding="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
