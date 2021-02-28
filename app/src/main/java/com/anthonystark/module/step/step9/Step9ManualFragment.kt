@@ -33,7 +33,7 @@ class Step9ManualFragment : Fragment(), ExpandableLayout.OnExpansionUpdateListen
     }
 
     override fun onExpansionUpdate(expansionFraction: Float, state: Int) {
-        Log.d("ExpandableLayout", "State: $state")
+        Log.d("ExpandableLayout", "State: $state expansionFraction: $expansionFraction")
         content!!.alpha = expansionFraction
     }
 
