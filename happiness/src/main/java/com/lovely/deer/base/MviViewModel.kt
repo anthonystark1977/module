@@ -2,8 +2,8 @@ package com.lovely.deer.base
 import androidx.annotation.CheckResult
 import androidx.lifecycle.LiveData
 
-import com.lovely.deer.util.Event
-import com.lovely.deer.util.NotNullLiveData
+import com.lovely.deer.util.data.Event
+import com.lovely.deer.util.data.NotNullLiveData
 
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.Disposable

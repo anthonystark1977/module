@@ -1,6 +1,6 @@
 @file:Suppress("SpellCheckingInspection", "unused")
 
-package com.lovely.deer.util
+package com.lovely.deer.util.data
 
 import android.annotation.SuppressLint
 import android.content.ContentResolver

@@ -8,8 +8,8 @@ import androidx.annotation.CallSuper
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.lovely.deer.util.observeEvent
-import com.lovely.deer.util.observe
+import com.lovely.deer.util.data.observeEvent
+import com.lovely.deer.util.data.observe
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.addTo
 import org.koin.androidx.scope.ScopeFragment

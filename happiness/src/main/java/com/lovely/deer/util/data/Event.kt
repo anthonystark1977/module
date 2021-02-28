@@ -1,4 +1,4 @@
-package com.lovely.deer.util
+package com.lovely.deer.util.data
 
 open class Event<out T>(private val content: T) {
 

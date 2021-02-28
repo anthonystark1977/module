@@ -1,4 +1,4 @@
-package com.lovely.deer.util
+package com.lovely.deer.util.data
 
 import androidx.lifecycle.ViewModel
 import org.koin.androidx.scope.ScopeFragment

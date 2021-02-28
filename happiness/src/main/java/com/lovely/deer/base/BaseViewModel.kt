@@ -7,9 +7,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-import com.lovely.deer.util.Event
-import com.lovely.deer.util.NotNullLiveData
-import com.lovely.deer.util.NotNullMutableLiveData
+import com.lovely.deer.util.data.Event
+import com.lovely.deer.util.data.NotNullLiveData
+import com.lovely.deer.util.data.NotNullMutableLiveData
 
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import timber.log.Timber

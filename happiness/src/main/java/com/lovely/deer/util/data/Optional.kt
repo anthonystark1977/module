@@ -1,4 +1,4 @@
-package com.lovely.deer.util
+package com.lovely.deer.util.data
 
 import java.util.*
 
