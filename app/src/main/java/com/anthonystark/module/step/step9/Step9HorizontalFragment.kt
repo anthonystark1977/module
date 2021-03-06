@@ -31,7 +31,7 @@ class Step9HorizontalFragment : Fragment(), View.OnClickListener,
     }
 
     override fun onExpansionUpdate(expansionFraction: Float, state: Int) {
-        Log.d("ExpandableLayout", "State: $state")
+        Log.d("ExpandableLayout", "State: $state fraction: $expansionFraction")
         expandButton!!.rotation = expansionFraction * 180
     }
 
