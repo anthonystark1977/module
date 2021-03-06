@@ -495,3 +495,21 @@ private fun String.escapeFileName(): String {
         replacement = "_"
     )
 }
+
+
+data class RequestCacheKey(
+    val path: String,
+    val queryItems: Map<String, String>,
+)
+
+fun buildKey(path: String, queryItems: Map<String, Any?>): RequestCacheKey {
+    return RequestCacheKey(
+        path = path,
+        queryItems = queryItems.entries
+            .mapNotNull { (k, v) ->
+                if (v == null) null
+                else k to v.toString()
+            }
+            .toMap()
+    )
+}
