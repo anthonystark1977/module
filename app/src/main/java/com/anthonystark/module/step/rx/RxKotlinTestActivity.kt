@@ -35,7 +35,7 @@ Observable.just(1,2,3) // creation of observable happens on Computational-Thread
  *  - 위의 예제에서
  *
  * http://tomstechnicalblog.blogspot.com/2016/02/rxjava-understanding-observeon-and.html
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-11 오후 8:51
  **/

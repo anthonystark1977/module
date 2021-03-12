@@ -11,7 +11,7 @@ import com.attractive.deer.util.data.*
  *
  * flatMap error시 밖으로 빠져나감.
  * map도 마찬가지 단순히 flatMap에서 right() 파싱해준 것.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:54
  **/

@@ -13,7 +13,7 @@ package com.anthonystark.module.librarytest
  *  - 가장 일반적인 긴으은 val myClass = MyClass::class 와 같이 런타임 참조 클래스를 가져오는 것. (KClass)
  *  - 함수를 참조하는 방법은 예를 들어 ::isOdd = (Int) -> Boolean 식으로 참조.
  *  - val predicate:(Int)->Boolean ==> ::isOdd 로 참조 될 수도 있다.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-11 오전 5:51
  **/

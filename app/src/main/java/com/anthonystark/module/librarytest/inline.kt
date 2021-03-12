@@ -22,7 +22,7 @@ import timber.log.Timber
  * ==> 하지만 crossinline을 하면 return 키워드를 방지할 수 있다.
  * ==> 아래예제에서 shortFunc 함수의 끝까지 가야함. 중간에 끊어질 수 있음.
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-10 오후 8:13
  **/

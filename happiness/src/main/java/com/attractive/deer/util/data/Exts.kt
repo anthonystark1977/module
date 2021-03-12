@@ -55,7 +55,7 @@ import androidx.lifecycle.Observer as LiveDataObserver
  * Refied can only be used in combination with inline function. These functions allow the compiler to copy the function's byte code wherever the function is used.
  * When an inline function is called along with the refied type, the compiler knows the actual type used as an argument(T) and replaces the byte code created with direct response to the class.
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:06
  **/
@@ -86,7 +86,7 @@ but since it is produced during receiving from the 129th, it is discarded.
 When the receive side is processed, one of the ignored values is passed and subsequently discharged.
  * - BackpressureStrategy.MISSING: The Missing value basically means that you do not want to use the backpressure provided by Flowable
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:09
  **/
@@ -101,7 +101,7 @@ inline fun <T : Any, R : Any> Observable<T>.exhaustMap(crossinline transform: (T
 
 /**
  *  The Observable value is an optional value after parsing (NULL check), and then returns the value.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:37
  **/
@@ -234,7 +234,7 @@ fun Snackbar.onDismissed(f: () -> Unit) {
 
 /**
  * Register Observer.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:44
  **/
@@ -267,7 +267,7 @@ fun <T : Any> LiveData<T>.toObservable(fallbackNullValue: (() -> T)? = null): Ob
 
 /**
  * Register Event Observer.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:45
  **/
@@ -305,7 +305,7 @@ fun <T : Any> MaterialSpinner.itemSelections(): InitialValueObservable<T> {
 /**
  * MaterialSpinnerSelectionObservable
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:58
  **/
@@ -340,7 +340,7 @@ internal class MaterialSpinnerSelectionObservable<T : Any>(private val view: Mat
 /**
  * MaterialSearchViewObservable
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:58
  **/
@@ -390,7 +390,7 @@ internal class MaterialSearchViewObservable(private val view: MaterialSearchView
  * @param overwrite: overwrite
  * @param bufferSize:  8 * 1024 = 8192b = 8kb = 0.0078mb
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 1.0.0
  * @since 2021-02-26 오후 2:12
  **/
@@ -467,7 +467,7 @@ fun <A, B, C, R> LiveData<A>.combineLatest(
  * @param initialDelay: Delay time every iteration.
  * @param factor: Delay time multiplied by argument.
  * @param maxDelay: Maximum delay time by coerceAtMost.
- * @author 권혁신
+ * @author Scarlett
  * @version 1.0.0
  * @since 2021-02-26 오후 1:29
  **/

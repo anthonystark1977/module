@@ -7,7 +7,7 @@ package com.attractive.deer.util.data
  * ? extends T: only read
  * ? super T: only write
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:12
  **/
@@ -15,7 +15,7 @@ sealed class Either<out L, out R>
 
 /**
  * If the value is left, T determines the type.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:20
  **/
@@ -23,7 +23,7 @@ data class Left<out T>(val value: T) : Either<T, Nothing>()
 
 /**
  * If the value is right, T determines the type.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:20
  **/
@@ -31,7 +31,7 @@ data class Right<out T>(val value: T) : Either<Nothing, T>()
 
 /**
  * Parsing with the left value.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:21
  **/
@@ -39,7 +39,7 @@ fun <T : Any?> T.left(): Either<T, Nothing> = Left(this)
 
 /**
  * Parsing with the right value.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:21
  **/
@@ -47,7 +47,7 @@ fun <T : Any?> T.right(): Either<Nothing, T> = Right(this)
 
 /**
  * Returns to left or right value, null if left value.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:21
  **/
@@ -64,7 +64,7 @@ fun <L : Any?, R : Any?> Either<L, R>.getOrNull(): R? {
  * - L: left type
  * - R: right type
  * - T: result type
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:22
  **/
@@ -80,7 +80,7 @@ inline fun <L, R, T> Either<L, R>.fold(left: (L) -> T, right: (R) -> T): T =
 
 /**
  * If the response is true, run the inline method and return an error if not.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 11:29
  **/
@@ -92,7 +92,7 @@ inline fun <L, R, T> Either<L, R>.flatMap(f: (R) -> Either<L, T>): Either<L, T> 
  * If the response is true, run the inline method and return an error if not.
  * The difference is that the true result is written as a parameter.
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 12:48
  **/

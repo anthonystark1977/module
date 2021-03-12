@@ -11,7 +11,7 @@ import timber.log.Timber
  *  - local-return 이 아니기에 [NON-LOCAL-RETURN]이라고 한다.
  *  - label(return@fun)을 사용하거나 fun()을 사용해서 local-return이 가능하다. (inline 없이도 그냥 라벨만 사용해서 리턴가능)
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-10 오후 8:00
  **/

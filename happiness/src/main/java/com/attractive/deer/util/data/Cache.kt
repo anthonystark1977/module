@@ -21,7 +21,7 @@ import kotlin.time.TimeSource
  * @param maxSize: cacheSize
  * @param entryLifetime: cache usage time.
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오전 10:56
  **/
@@ -36,7 +36,7 @@ class Cache<K : Any, V : Any>(maxSize: Int, private val entryLifetime: Duration)
      * The conclusion is that only one thread per instance can be accessed if a method using synchronized exists.
      * To put it simply, using synchronized in a method means that the object containing the function is locked.
      *
-     * @author 권혁신
+     * @author Scarlett
      * @version 0.0.8
      * @since 2021-03-08 오전 11:09
      **/

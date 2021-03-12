@@ -15,7 +15,19 @@ import io.reactivex.rxjava3.kotlin.addTo
 import org.koin.androidx.scope.ScopeFragment
 import timber.log.Timber
 
-
+/**
+ *
+ * @property I: Any action that can be performed in app.
+ * @property S: The status of the current screen.
+ * @property E: Toast,Snack,Dialog ...
+ * @property VM: MviViewModel.
+ * @property VB: DataBinding.
+ * @param layoutId: layoutId
+ *
+ * @author Scarlett
+ * @version 1.0.0
+ * @since 2021-03-12 오후 2:34
+ **/
 abstract class BaseFragment<
         I : MviIntent,
         S : MviViewState,
@@ -57,6 +69,13 @@ abstract class BaseFragment<
 
     protected abstract fun setUpView(view: View, savedInstanceState: Bundle?)
 
+    /**
+     * Rendering,EventProcessing,Intent..
+     *
+     * @author Scarlett
+     * @version 1.0.0
+     * @since 2021-03-12 오후 2:37
+     **/
     private fun bindVM() {
         mViewModel.state.observe(owner = viewLifecycleOwner, ::render)
         mViewModel.singleEvent.observeEvent(viewLifecycleOwner, ::handleEvent)

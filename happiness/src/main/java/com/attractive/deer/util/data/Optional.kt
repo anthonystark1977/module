@@ -4,7 +4,7 @@ import java.util.*
 
 /**
  * Implementation of Java's Optional.
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:36
  **/
@@ -35,7 +35,7 @@ fun <T> Optional<T>.getOrThrow(): T = getOrElse { throw NoSuchElementException("
 
 /**
  * Return Some().
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-08 오후 1:34
  **/

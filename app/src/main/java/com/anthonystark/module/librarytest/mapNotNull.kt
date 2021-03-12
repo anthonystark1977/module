@@ -8,7 +8,7 @@ import timber.log.Timber
  *
  * null이면 필터 처리되서 걸러짐.
  *
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-10 오후 7:35
  **/

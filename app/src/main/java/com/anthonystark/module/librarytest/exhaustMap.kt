@@ -7,7 +7,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 /**
  * [exhaustMap]
- * @author 권혁신
+ * @author Scarlett
  * @version 0.0.8
  * @since 2021-03-10 오후 8:14
  **/
