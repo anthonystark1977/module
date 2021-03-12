@@ -17,7 +17,7 @@
         android:padding="16dp"
         android:text="Tap to toggle expansion" />
 
-    <com.lovely.deer.util.layout.expandable.ExpandableLayout
+    <com.attractive.deer.util.layout.expandable.ExpandableLayout
         android:id="@+id/expandable_layout_0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,9 +34,9 @@
             android:text="Fixed height"
             android:textColor="#fff" />
 
-    </com.lovely.deer.util.layout.expandable.ExpandableLayout>
+    </com.attractive.deer.util.layout.expandable.ExpandableLayout>
 
-    <com.lovely.deer.util.layout.expandable.ExpandableLayout
+    <com.attractive.deer.util.layout.expandable.ExpandableLayout
         android:id="@+id/expandable_layout_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -54,6 +54,6 @@
             android:text="Fill height"
             android:textColor="#fff" />
 
-    </com.lovely.deer.util.layout.expandable.ExpandableLayout>
+    </com.attractive.deer.util.layout.expandable.ExpandableLayout>
 
 </LinearLayout>

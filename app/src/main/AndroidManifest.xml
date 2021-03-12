@@ -13,7 +13,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,6 +26,7 @@
         <activity android:name=".step.Step7Activity" />
         <activity android:name=".step.Step8Activity" />
         <activity android:name=".step.step9.Step9Activity"/>
+        <activity android:name=".step.rx.RxKotlinTestActivity"/>
     </application>
 
 

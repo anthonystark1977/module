@@ -9,7 +9,7 @@ import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import com.anthonystark.module.R
-import com.lovely.deer.util.layout.expandable.ExpandableLayout
+import com.attractive.deer.util.layout.expandable.ExpandableLayout
 
 class Step9SimpleFragment : Fragment(), View.OnClickListener {
     private lateinit var expandableLayout0: ExpandableLayout

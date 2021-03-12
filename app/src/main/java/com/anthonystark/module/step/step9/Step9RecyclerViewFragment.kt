@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.anthonystark.module.R
-import com.lovely.deer.util.layout.expandable.ExpandableLayout
+import com.attractive.deer.util.layout.expandable.ExpandableLayout
 
 class Step9RecyclerViewFragment : Fragment() {
     @Nullable

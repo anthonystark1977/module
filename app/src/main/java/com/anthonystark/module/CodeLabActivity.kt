@@ -9,11 +9,23 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.anthonystark.module.librarytest.*
+import com.anthonystark.module.librarytest.nonLocalReturnTest
 import com.anthonystark.module.step.*
+import com.anthonystark.module.step.rx.RxKotlinTestActivity
 import com.anthonystark.module.step.step9.Step9Activity
 import kotlinx.android.synthetic.main.activity_code_lab.*
+import timber.log.Timber
 
 private val data = listOf(
+
+    Step(
+        "[RxKotlinTest]",
+        "RxKotlin.",
+        "RxKotlin, Rx3, RxRelay ",
+        RxKotlinTestActivity::class
+    ),
+
     Step(
         "[ExpandableLayout]",
         "익스펜더블 레이아웃.",
@@ -75,8 +87,13 @@ class CodeLabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_code_lab)
-
+        Timber.plant(Timber.DebugTree())
         rv_code_lab.run { adapter = MainAdapter(data) }
+        test()
+    }
+
+    private fun test() {
+
     }
 
     companion object {

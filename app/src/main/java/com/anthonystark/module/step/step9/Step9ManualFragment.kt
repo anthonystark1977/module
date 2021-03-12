@@ -10,7 +10,7 @@ import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import com.anthonystark.module.R
-import com.lovely.deer.util.layout.expandable.ExpandableLayout
+import com.attractive.deer.util.layout.expandable.ExpandableLayout
 
 class Step9ManualFragment : Fragment(), ExpandableLayout.OnExpansionUpdateListener,
     OnSeekBarChangeListener {

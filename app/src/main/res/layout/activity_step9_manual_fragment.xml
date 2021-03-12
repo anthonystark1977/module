@@ -12,7 +12,7 @@
         android:max="100"
         android:progress="100" />
 
-    <com.lovely.deer.util.layout.expandable.ExpandableLayout
+    <com.attractive.deer.util.layout.expandable.ExpandableLayout
         android:id="@+id/expandable_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +29,6 @@
             android:text="Content"
             android:textColor="#fff" />
 
-    </com.lovely.deer.util.layout.expandable.ExpandableLayout>
+    </com.attractive.deer.util.layout.expandable.ExpandableLayout>
 
 </LinearLayout>
