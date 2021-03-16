@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.anthonystark.module.librarytest.*
-import com.anthonystark.module.librarytest.nonLocalReturnTest
 import com.anthonystark.module.step.*
 import com.anthonystark.module.step.rx.RxKotlinTestActivity
 import com.anthonystark.module.step.step9.Step9Activity
@@ -93,7 +92,11 @@ class CodeLabActivity : AppCompatActivity() {
     }
 
     private fun test() {
-
+        // exhaustMapTest03()
+        // testFlatMap()
+        // exhaustMapTest()
+        // shareTest()
+        publishTest()
     }
 
     companion object {
