@@ -95,8 +95,11 @@ class CodeLabActivity : AppCompatActivity() {
         // exhaustMapTest03()
         // testFlatMap()
         // exhaustMapTest()
-        // shareTest()
-        publishTest()
+        shareTest01()
+        // publishTest()
+        // exhaustMapTest02()
+        // testFlatMap()
+        //exhaustMapTest()
     }
 
     companion object {

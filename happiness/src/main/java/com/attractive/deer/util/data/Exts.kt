@@ -8,12 +8,15 @@ import android.content.Context
 import android.content.res.Configuration.ORIENTATION_PORTRAIT
 import android.net.Uri
 import android.os.Looper
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.view.animation.Interpolator
+import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.*
 import androidx.core.content.ContextCompat
@@ -43,7 +46,12 @@ import io.reactivex.rxjava3.core.ObservableEmitter
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.kotlin.ofType
 import io.reactivex.rxjava3.subjects.Subject
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.onStart
 import timber.log.Timber
 import java.io.File
 import java.io.IOException
@@ -549,4 +557,21 @@ private fun String.escapeFileName(): String {
         "[^a-zA-Z0-9.\\-]".toRegex(),
         replacement = "_"
     )
+}
+
+
+@ExperimentalCoroutinesApi
+@CheckResult
+fun EditText.textChanges(): Flow<CharSequence?> {
+    return callbackFlow<CharSequence?> {
+        val listener = object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) = Unit
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                offer(s)
+            }
+        }
+        addTextChangedListener(listener)
+        awaitClose { removeTextChangedListener(listener) }
+    }.onStart { emit(text) }
 }

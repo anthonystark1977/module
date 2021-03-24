@@ -42,7 +42,7 @@ fun publishTest() {
 
 }
 
-fun shareTest() {
+fun shareTest01() {
     var emitter:ObservableEmitter<String>? = null
     val srcObservable = Observable.create<String> { emitter = it }.share()
 
@@ -50,4 +50,11 @@ fun shareTest() {
     emitter?.onNext("String 1")
     srcObservable.subscribe{ Timber.tag("publishTest").d("#2 $it") }
     emitter?.onNext("String 2")
+}
+
+fun shareTest02() {
+
+    val observable = Observable.just("1").share()
+    observable.subscribe{ Timber.tag("publishTest").d("#1 $it") }
+    observable.subscribe{ Timber.tag("publishTest").d("#2 $it") }
 }

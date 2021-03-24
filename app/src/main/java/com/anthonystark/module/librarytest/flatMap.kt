@@ -65,7 +65,7 @@ fun testFlatMap() {
                     // write out on blocking IO as a side-effect
                     println("Emitting to IO: $t")
                 }
-        }, 1).forEach {
+        }, 3).forEach {
             Timber.tag("testFlatMap").d("Send Item $it - ${Thread.currentThread().name}")
         }
 }

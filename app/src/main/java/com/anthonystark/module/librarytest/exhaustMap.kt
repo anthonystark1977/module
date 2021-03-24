@@ -57,7 +57,7 @@ fun exhaustMapTest01() = runBlocking<Unit> {
 * - Flowable은 생산의 갯수가 수천, 수많개 정도로 많을때 사용하고 그렇지 않은 경우 observable을 사용하는 것이 좋음.
 * */
 fun exhaustMapTest02() = runBlocking<Unit> {
-    val flowable = Flowable.range(1, 150)
+    val flowable = Flowable.range(1, 300)
     flowable.map {
         val str = "Mapping Item $it"
         Timber.tag("exhaustMapTest").d("$str - ${Thread.currentThread().name}")
@@ -121,6 +121,7 @@ fun exhaustMapTest03() = runBlocking<Unit> {
 
 fun exhaustMapTest() = runBlocking<Unit> {
     val scheduler = TestScheduler()
+
     val observable = Observable.create<Int>{
         for (i in 1..500) {
             Timber.tag("exhaustMapTest").d("Send Item $i - ${Thread.currentThread().name}")
@@ -134,7 +135,6 @@ fun exhaustMapTest() = runBlocking<Unit> {
             Observable.just(s.toString() + "x").delay(100, TimeUnit.MILLISECONDS)
         }.subscribe{
             Timber.tag("exhaustMapTest").d("######## Receivce Item $it - ${Thread.currentThread().name}")
-            runBlocking { delay(200) }
         }
 
     scheduler.advanceTimeBy(1, TimeUnit.MINUTES)
